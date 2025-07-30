@@ -1,0 +1,278 @@
+/* PDF Template Styles for Regent College London Offer Letter */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #333;
+}
+
+.page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 20mm;
+    margin: 0 auto;
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.contact-info {
+    font-size: 11px;
+    color: #666;
+}
+
+.contact-info div {
+    margin-bottom: 3px;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+/* Document Info */
+.document-info {
+    margin-bottom: 25px;
+}
+
+.date {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.student-details div {
+    margin-bottom: 3px;
+}
+
+/* Thank You and Offer Statement */
+.thank-you {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.offer-statement {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Course Details Table */
+.course-details {
+    margin-bottom: 20px;
+}
+
+.course-details table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.course-details td {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+}
+
+.course-details .label {
+    font-weight: bold;
+    background-color: #f8f9fa;
+    width: 35%;
+}
+
+/* Notes and Conditions */
+.fees-note {
+    font-size: 10px;
+    margin-bottom: 15px;
+    font-style: italic;
+    color: #666;
+}
+
+.bursary-offer {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #d63384;
+}
+
+.admission-requirements {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.conditions-section {
+    margin-bottom: 20px;
+}
+
+.conditions-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.conditions-list {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.conditions-list li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.sub-conditions {
+    margin-top: 8px;
+    margin-left: 20px;
+}
+
+.sub-conditions li {
+    margin-bottom: 5px;
+}
+
+/* Page 2 Specific Styles */
+.continued-content {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.terms-section {
+    margin-bottom: 30px;
+}
+
+.terms-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.terms-list {
+    margin-left: 20px;
+}
+
+.terms-list li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Signature Section */
+.signature-section {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.signature-text {
+    margin-bottom: 10px;
+}
+
+.signature-image {
+    margin: 20px 0;
+    height: 50px;
+}
+
+.signature {
+    max-height: 50px;
+    width: auto;
+}
+
+.signatory-info {
+    margin-top: 5px;
+}
+
+.signatory-name {
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.signatory-title {
+    font-size: 11px;
+    color: #666;
+}
+
+/* Watermark Styles */
+.watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    font-size: 120px;
+    color: rgba(158, 48, 146, 0.05);
+    font-weight: bold;
+    z-index: -1;
+    user-select: none;
+    pointer-events: none;
+}
+
+.watermark::before {
+    content: "RCL";
+    display: block;
+}
+
+.footer-watermark {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.large-watermark {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 300px;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xNTAgMjBMMjUwIDEwMEwxNTAgMTgwTDUwIDEwMFoiIGZpbGw9InJnYmEoMTU4LCA0OCwgMTQ2LCAwLjA4KSIvPgo8cGF0aCBkPSJNMTUwIDEyMEwyNTAgMjAwTDE1MCAyODBMNTAgMjAwWiIgZmlsbD0icmdiYSgxNTgsIDQ4LCAxNDYsIDAuMDgpIi8+Cjwvc3ZnPgo=');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1;
+}
+
+/* Print Styles */
+@media print {
+    .page {
+        margin: 0;
+        padding: 15mm;
+        min-height: auto;
+    }
+    
+    body {
+        font-size: 11px;
+    }
+}
+
+/* Page Break for Multi-page PDFs */
+.page-break {
+    page-break-before: always;
+}
+
+/* Responsive adjustments for PDF generation */
+@media screen and (max-width: 210mm) {
+    .page {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .logo img {
+        height: 40px;
+    }
+}

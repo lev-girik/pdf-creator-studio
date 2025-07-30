@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regent College London - Offer Letter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- PAGE 1 -->
+    <div class="page">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="contact-info">
+                <div class="phone">📞 +44 (0)20 3870 6666</div>
+                <div class="email">📧 admissions@rcl.ac.uk</div>
+            </div>
+            <div class="logo">
+                <img src="https://publicassets.leverageedu.com/rcl-logo.png" alt="Regent College London" />
+            </div>
+        </div>
+
+        <!-- Date and Student Info -->
+        <div class="document-info">
+            <div class="date">Date: {{date}}</div>
+            <div class="student-details">
+                <div>Dear {{studentName}}</div>
+                <div>Date of Birth: {{dateOfBirth}}</div>
+                <div>Student Reference ID: {{studentReferenceId}}</div>
+            </div>
+        </div>
+
+        <!-- Thank You Message -->
+        <div class="thank-you">
+            Thank you for choosing Regent College London as your higher education provider.
+        </div>
+
+        <!-- Offer Statement -->
+        <div class="offer-statement">
+            After reviewing your application, we are pleased to make you a <strong>{{offerType}}</strong> for the following course:
+        </div>
+
+        <!-- Course Details Table -->
+        <div class="course-details">
+            <table>
+                <tr>
+                    <td class="label">Provider:</td>
+                    <td>{{provider}}</td>
+                </tr>
+                <tr>
+                    <td class="label">Awarding Body/Institution:</td>
+                    <td>{{awardingBody}}</td>
+                </tr>
+                <tr>
+                    <td class="label">Cohort:</td>
+                    <td>{{cohort}}</td>
+                </tr>
+                <tr>
+                    <td class="label">Course Name:</td>
+                    <td>{{courseName}}</td>
+                </tr>
+                <tr>
+                    <td class="label">Tuition Fees*:</td>
+                    <td>{{tuitionFees}}</td>
+                </tr>
+                <tr>
+                    <td class="label">Course Duration:</td>
+                    <td>{{courseDuration}}</td>
+                </tr>
+                <tr>
+                    <td class="label">Location:</td>
+                    <td>{{location}}</td>
+                </tr>
+                <tr>
+                    <td class="label">Course Start Date:</td>
+                    <td>{{courseStartDate}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Fees Note -->
+        <div class="fees-note">
+            *Please note that the fees and the bursary for this year's degree programme are based on the current rate and are subject to change in future years. Regent College London reserves the right to adjust fees as necessary.
+        </div>
+
+        <!-- Bursary Offer -->
+        <div class="bursary-offer">
+            **Early Bird April Bursary: {{bursaryAmount}} – Limited Offer Available
+        </div>
+
+        <!-- Admission Requirements -->
+        <div class="admission-requirements">
+            Admission to the course will not be granted until all the requirements listed below are satisfied:
+        </div>
+
+        <!-- Academic Conditions -->
+        <div class="conditions-section">
+            <div class="conditions-title">Academic Conditions to be met before a CAS can be issued:</div>
+            <ul class="conditions-list">
+                {{#each academicConditions}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+
+        <!-- Other Conditions -->
+        <div class="conditions-section">
+            <div class="conditions-title">Other Conditions to be met before a CAS can be issued:</div>
+            <ul class="conditions-list">
+                {{#each otherConditions}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+
+        <!-- Background Watermark -->
+        <div class="watermark"></div>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div class="page page-break">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="contact-info">
+                <div class="phone">📞 +44 (0)20 3870 6666</div>
+                <div class="email">📧 admissions@rcl.ac.uk</div>
+            </div>
+            <div class="logo">
+                <img src="https://publicassets.leverageedu.com/rcl-logo.png" alt="Regent College London" />
+            </div>
+        </div>
+
+        <!-- Continued Content -->
+        <div class="continued-content">
+            <p>{{continuedText}}</p>
+        </div>
+
+        <!-- Terms and Conditions -->
+        <div class="terms-section">
+            <div class="terms-title">Terms and Conditions:</div>
+            <ol class="terms-list">
+                <li>This Offer in Principle is based on the preliminary assessment of your academic profile and intent to study.</li>
+                <li>It does not confirm final admission or eligibility for a CAS (Confirmation of Acceptance for Studies).</li>
+                <li>You may still be required to:
+                    <ul class="sub-conditions">
+                        <li>Submit additional documents for verification</li>
+                        <li>Attend a credibility interview</li>
+                        <li>Satisfy financial and visa compliance requirements (e.g., bank statements, TB test, etc.)</li>
+                    </ul>
+                </li>
+                <li>Once you fulfill the remaining academic and administrative requirements, a Formal Unconditional Offer will be issued.</li>
+                <li>Campus location will be confirmed in your CAS letter closer to your course start date.</li>
+                <li>For complete policies, refer to our website's Terms and Conditions section.</li>
+            </ol>
+        </div>
+
+        <!-- Signature Section -->
+        <div class="signature-section">
+            <div class="signature-text">Yours sincerely,</div>
+            {{#if signatureBase64}}
+            <div class="signature-image">
+                <img src="data:image/png;base64,{{signatureBase64}}" alt="Signature" class="signature" />
+            </div>
+            {{else}}
+            <div class="signature-image" style="height: 50px;"></div>
+            {{/if}}
+            <div class="signatory-info">
+                <div class="signatory-name">{{signatoryName}}</div>
+                <div class="signatory-title">{{signatoryTitle}}</div>
+            </div>
+        </div>
+
+        <!-- Footer with Large Watermark -->
+        <div class="footer-watermark">
+            <div class="large-watermark"></div>
+        </div>
+
+        <!-- Background Watermark -->
+        <div class="watermark"></div>
+    </div>
+</body>
+</html>
